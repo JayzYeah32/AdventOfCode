@@ -1,6 +1,4 @@
 List<string> report = File.ReadAllLines("Numbers.txt").ToList();
-string tree = File.ReadAllText("Numbers.txt");
-int row = report.First().Length;
 
 long count(int incx, int incy)
 {
