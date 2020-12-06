@@ -1,4 +1,5 @@
 string report = File.ReadAllText("Numbers.txt");
+ // 'Numbers.txt' is the list of passports.
 
 IEnumerable<Dictionary<string, string>> arr = Regex.Split(report, "\r\n\r\n").Select(s => Regex.Matches(s, @"(?<name>[a-z]{3})\:(?<code>[^\s]+)").Cast<Match>().ToDictionary(x => x.Groups["name"].Value, x => x.Groups["code"].Value));
 arr = arr.Where(x => x.Count == 8 || (x.Count == 7 && !x.ContainsKey("cid")));
