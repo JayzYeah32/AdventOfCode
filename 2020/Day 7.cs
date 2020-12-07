@@ -21,7 +21,7 @@ while (arr.Count > 0)
 }
 
  // part 1
-Console.WriteLine(containnon.Where(x => x.Value.Where(y => y.Key.Contains("shiny gold")).Count() > 0).Count());
+Console.WriteLine(containnon.Where(x => x.Value.ContainsKey("shiny gold")).Count());
 
  // part 2
 Console.WriteLine(bags["shiny gold"] - 1);
